@@ -8,58 +8,51 @@
  *
  * @author FABAME
  */
-public class NodoArbolBinario {
+public class NodoArbolBinario<E> {
 
-    private int dato;
-    private NodoArbolBinario hijoIzquierdo;
-    private NodoArbolBinario hijoDerecho;
+    private NodoArbolBinario<E> hijoIzquierdo;
+    private E elemento;
+    private NodoArbolBinario<E> hijoDerecho;
 
     public NodoArbolBinario() {
-        this.dato = 0;
         this.hijoIzquierdo = null;
+        this.elemento = null;
         this.hijoDerecho = null;
     }
 
-    public NodoArbolBinario(int dato) {
-        this.dato = dato;
+    public NodoArbolBinario(E elemento) {
         this.hijoIzquierdo = null;
+        this.elemento = elemento;
         this.hijoDerecho = null;
     }
 
-    public NodoArbolBinario(int dato, NodoArbolBinario hijoIzquierdo, NodoArbolBinario hijoDerecho) {
-        this.dato = dato;
+    public NodoArbolBinario(NodoArbolBinario<E> hijoIzquierdo, E elemento, NodoArbolBinario<E> hijoDerecho) {
         this.hijoIzquierdo = hijoIzquierdo;
+        this.elemento = elemento;
         this.hijoDerecho = hijoDerecho;
     }
 
-    public NodoArbolBinario(NodoArbolBinario nodo) {
-        this.dato = nodo.getDato();
-        this.hijoIzquierdo = nodo.getHijoIzquierdo();
-        this.hijoDerecho = nodo.getHijoDerecho();
-    }
-
-    public int getDato() {
-        return dato;
-    }
-
-    public void setDato(int dato) {
-        this.dato = dato;
-    }
-
-    public NodoArbolBinario getHijoIzquierdo() {
+    public NodoArbolBinario<E> getHijoIzquierdo() {
         return hijoIzquierdo;
     }
 
-    public void setHijoIzquierdo(NodoArbolBinario hijoIzquierdo) {
+    public void setHijoIzquierdo(NodoArbolBinario<E> hijoIzquierdo) {
         this.hijoIzquierdo = hijoIzquierdo;
     }
 
-    public NodoArbolBinario getHijoDerecho() {
+    public E getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(E elemento) {
+        this.elemento = elemento;
+    }
+
+    public NodoArbolBinario<E> getHijoDerecho() {
         return hijoDerecho;
     }
 
-    public void setHijoDerecho(NodoArbolBinario hijoDerecho) {
+    public void setHijoDerecho(NodoArbolBinario<E> hijoDerecho) {
         this.hijoDerecho = hijoDerecho;
     }
-
 }
