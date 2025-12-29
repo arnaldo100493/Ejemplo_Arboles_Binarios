@@ -172,7 +172,7 @@ public class ArbolBinario<E> {
     }
 
     public String buscarMayor() {
-        int mayor = this.buscarMayor(this.raiz);
-        return "El dato de mayor valor es: " + mayor;
+        Integer mayor = this.buscarMayor(this.raiz);
+        return "El Elemento de mayor valor es: " + mayor;
     }
 }
