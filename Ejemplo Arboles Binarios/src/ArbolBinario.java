@@ -75,13 +75,13 @@ public class ArbolBinario<E> {
     }
 
     // BUSCAR EL NODO DE UN ÁRBOL
-    private boolean buscar(NodoArbolBinario<E> nodo, E elemento) {
+    private Boolean buscar(NodoArbolBinario<E> nodo, E elemento) {
         if (nodo != null) {
             if (nodo.getElemento().equals(elemento)) {
                 return true;
             }
-            boolean ok1 = this.buscar(nodo.getHijoIzquierdo(), elemento);
-            boolean ok2 = this.buscar(nodo.getHijoDerecho(), elemento);
+            Boolean ok1 = this.buscar(nodo.getHijoIzquierdo(), elemento);
+            Boolean ok2 = this.buscar(nodo.getHijoDerecho(), elemento);
 
             if (ok1 || ok2) {
                 return true;
