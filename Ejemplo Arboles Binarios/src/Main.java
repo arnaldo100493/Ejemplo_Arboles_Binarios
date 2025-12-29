@@ -23,6 +23,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         ArbolBinario<Integer> ab = new ArbolBinario<>();
 
         NodoArbolBinario<Integer> n1 = new NodoArbolBinario<>(1);
